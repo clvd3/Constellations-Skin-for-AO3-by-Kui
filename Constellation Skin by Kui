@@ -118,6 +118,10 @@ ul.notes a,
   font-weight: bold;
 }
 
+#kudos {
+  display: none !important;
+}
+
 .splash .module h3 {
   color: #D3D3D3;
   border-bottom: 2px solid #D3D3D3;
@@ -172,8 +176,12 @@ ul.navigation.actions li a,
   background: #424c5e;
   border: 1px solid #D3D3D3;
   color: #D3D3D3;
-  box-shadow: 0px 0px 15px #D3D3D3;
+  box-shadow: none !important;
   border-radius: 5px;
+}
+
+.work.navigation.actions {
+  margin-bottom: 3em !important;
 }
 
 .current,
@@ -437,4 +445,35 @@ dd.relationship.tags a:hover {
   background: transparent !important;
   border-color: transparent !important;
   box-shadow: none !important;
+}
+
+.userstuff p {
+  line-height: 1.66 !important;
+  margin-bottom: 1.5em !important;
+  text-align: justify !important;
+  text-justify: inter-word !important;
+}
+
+.userstuff p::first-line {
+  text-align: left !important;
+  text-justify: none !important;
+}
+
+.userstuff p::first-letter {
+  font-size: 200%;
+  font-weight: bold;
+  color: #f3bc70;
+  font-family: "Georgia", "Times New Roman", serif;
+  font-style: italic;
+  display: inline-block !important;
+  text-align: center !important;
+  width: 1.5em !important;
+  line-height: 0.5 !important;
+  margin-bottom: -0.5em !important;
+  vertical-align: middle !important;
+  padding-top: 0.1em !important;
+}
+
+.userstuff {
+  margin-bottom: 5em !important;
 }
