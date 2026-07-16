@@ -10,6 +10,19 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  position: relative;
+}
+
+#header::before {
+  content: "made by rkui_txt";
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  color: #D3D3D3;
+  font-size: 10px;
+  font-weight: bold;
+  text-shadow: 0px 0px 5px #151726;
+  z-index: 10;
 }
 
 #header .logo,
@@ -99,10 +112,14 @@ ul.notes,
 .comment_error,
 .kudos_error,
 .alert.flash {
-  background: #D3D3D3;
+  background: #151726 !important;
+  border: none !important;
+  border-width: 0 !important;
+  outline: none !important;
   box-shadow: 0px 0px 15px #D3D3D3 !important;
-  color: #0d0e1f;
-  border: none;
+  color: #D3D3D3 !important;
+  font-weight: bold !important;
+  text-shadow: 0px 0px 10px #D3D3D3;
 }
 
 .notice a,
@@ -114,7 +131,7 @@ ul.notes a,
 .comment_error a,
 .kudos_error a,
 .alert.flash a {
-  color: #505b69;
+  color: #f3bc70 !important;
   font-weight: bold;
 }
 
@@ -353,22 +370,42 @@ span.replied {
   box-shadow: 0px 0px 15px #D3D3D3;
 }
 
+.comment .header,
 h4.heading.byline {
-  background: #D3D3D3;
-  color: #0d0e1f;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
-li.comment {
-  border: 1px solid #D3D3D3;
+h4.heading.byline,
+h4.heading.byline a,
+.comment .header .datetime {
+  color: #D3D3D3 !important;
+  text-shadow: none !important;
+}
+
+li.comment .header,
+.comment .header {
+  background: transparent !important;
+  border-bottom: none !important;
+}
+
+.comment {
+  box-shadow: none !important;
+  border: 1px solid #D3D3D3 !important;
+  margin-bottom: 15px !important;
+  padding: 15px !important;
 }
 
 .comment div.icon {
   border-bottom: 5px solid #D3D3D3;
-  box-shadow: 0px 0px 15px #D3D3D3;
+  box-shadow: none !important;
 }
 
-.thread .even {
-  background: #424c5e;
+.thread .even,
+.thread .odd {
+  background: #151726 !important;
 }
 
 .unread {
@@ -391,7 +428,8 @@ dd.fandom.tags a {
   background: none;
   color: #D3D3D3 !important;
   font-weight: bold;
-  text-shadow: 0px 0px 0px #D3D3D3;
+  box-shadow: none !important;
+  text-shadow: none !important;
 }
 
 .relationships .tag,
@@ -409,7 +447,8 @@ dd.freeform.tags a {
   background: none;
   color: #D3D3D3 !important;
   font-weight: bold;
-  text-shadow: 0px 0px 15px #D3D3D3;
+  box-shadow: none !important;
+  text-shadow: none !important;
 }
 
 .warning .tag,
@@ -418,7 +457,8 @@ dd.warning.tags a {
   background: none;
   color: #D3D3D3 !important;
   font-weight: bold;
-  text-shadow: 0px 0px 15px #D3D3D3;
+  box-shadow: none !important;
+  text-shadow: none !important;
 }
 
 .tag:hover,
